@@ -1,0 +1,35 @@
+management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+  server:
+    port: 4000
+  endpoint:  #활성화
+#    shutdown:
+#      enabled: true
+    health:
+      show-components: always
+#      show-details: always
+  endpoints: #노출
+    web:
+      exposure:
+        include: "*"
+#        exclude: "env,beans"
+
+info:
+  app:
+    name: hello-actuator
+    company: yh
+
+logging:
+  level:
+    hello.controller: debug
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
